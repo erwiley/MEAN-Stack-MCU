@@ -1,0 +1,65 @@
+<div class="interiorPage">
+    <h1>Add Movie</h1>
+
+    <div class="addMovieContainer" data-ng-controller="AddMovieController">
+        <form name="addmovieform" validation data-ng-submit="submit(addmovieform)"
+            method="post"
+            action=""
+            role="form">
+            <div data-ng-hide="formError()" data-ng-class="result">
+                {{resultMessage}}
+            </div>
+
+            <div class="row">
+                <input type="text" name="phase" id="phase" data-ng-model="movieData.phase" placeholder="Phase" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="title" id="title" data-ng-model="movieData.title" placeholder="Title" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="thumbnail" id="thumbnail" data-ng-model="movieData.thumbnail" placeholder="Thumbnail" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="date" id="date" data-ng-model="movieData.date" placeholder="Date" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="cast" id="cast" data-ng-model="movieData.cast" placeholder="Cast" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="director" id="director" data-ng-model="movieData.director" placeholder="Director" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="writers" id="writers" data-ng-model="movieData.writers" placeholder="Writers" required />
+            </div>
+
+            <div class="row">
+                <textarea id="inputSynopsis" name="inputSynopsis" data-ng-model="movieData.synopsis" rows="4" placeholder="Synopsis"></textarea>
+            </div>
+
+            <div class="row">
+                <input type="text" name="rating" id="rating" data-ng-model="movieData.rating" placeholder="Rating" required />
+            </div>
+
+            <div class="row">
+                <input type="text" name="trailer" id="trailer" data-ng-model="movieData.trailer" placeholder="Trailer" />
+            </div>
+
+            <div class="row">
+                <input type="text" name="boxoffice" id="boxoffice" data-ng-model="movieData.boxoffice" placeholder="Boxoffice" required />
+            </div>
+
+            <div class="row">
+                <input type="button" class="btn btn-default"
+                    data-ng-disabled="submitButtonDisabled"
+                    data-ng-click="submit(addmovieform)"
+                    value="Send" />
+            </div>
+        </form>
+    </div>
+</div>
