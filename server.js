@@ -25,6 +25,11 @@ app.get('/api/movies', (req, res) => {
 });
 
 app.post('/api/movies', (req, res) => {
+	res.redirect('/api/movies');
+});
+
+/*
+app.post('/api/movies', (req, res) => {
 	var movie = req.body;
 	//console.log(movie);
 	Movie.addMovie(movie, (err, movie) => {
@@ -34,6 +39,7 @@ app.post('/api/movies', (req, res) => {
 		res.json(movie);
 	});
 });
+*/
 
 // temp delete route
 app.get('/api/movies/delete/:_id', (req, res) => {
